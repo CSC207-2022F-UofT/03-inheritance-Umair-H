@@ -49,15 +49,15 @@ public abstract class Bag {
      */
 
     public String getColor() {
-        return color;
+        return this.color;
     }
 
     public int getNumberOfContents() {
-        return numberOfContents;
+        return this.numberOfContents;
     }
 
     public int getCapacity() {
-        return capacity;
+        return this.capacity;
     }
 
     /*
@@ -98,12 +98,12 @@ public abstract class Bag {
      * @return
      */
     public String popItem(){
-        if (getNumberOfContents() <= 0){
+        if (this.getNumberOfContents() <= 0){
             return null;
         }
         else {
             String item = this.contents[numberOfContents-1];
-            contents[numberOfContents-1] = null;
+            this.contents[numberOfContents-1] = null;
             numberOfContents--;
             return item;
         }
