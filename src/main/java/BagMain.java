@@ -36,7 +36,9 @@ class BagMain {
         // TODO: Implement this.
         int sum = 0;
         for (Bag bag : bags) {
-            sum += ((CrossbodyBag) bag).getNumberOfStraps();
+            if (bag instanceof CrossbodyBag) {
+                sum += ((CrossbodyBag) bag).getNumberOfStraps();
+            }
         }
         return sum;
     }
